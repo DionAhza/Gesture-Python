@@ -47,8 +47,8 @@ facepy/
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/username/nama-repo.git
-cd nama-repo
+git clone https://github.com/DionAhza/Gesture-Python.git
+cd Gesture-Python
 ```
 
 ### 2. Buat Virtual Environment
