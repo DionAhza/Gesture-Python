@@ -2,10 +2,6 @@
 
 Proyek ini adalah aplikasi Python yang mendeteksi gesture tangan menggunakan webcam, lalu menampilkan emoji yang sesuai berdasarkan gerakan jari. Dibangun menggunakan `OpenCV`, `MediaPipe`, dan `cv2`.
 
-## 📸 Demo
-
-![demo gif or screenshot](preview.gif)  
-_(tambahkan GIF/screenshot jika ada)_
 
 ## ✨ Fitur
 - Deteksi real-time gesture tangan dengan webcam
