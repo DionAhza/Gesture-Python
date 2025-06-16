@@ -2,45 +2,45 @@
 
 Proyek ini adalah aplikasi Python yang mendeteksi gesture tangan menggunakan webcam, lalu menampilkan emoji yang sesuai berdasarkan gerakan jari. Dibangun menggunakan `OpenCV`, `MediaPipe`, dan `cv2`.
 
-
 ## ✨ Fitur
-- Deteksi real-time gesture tangan dengan webcam
-- Tampilkan emoji sesuai gesture (misal: 👍 ✌️ ✊ 🤟)
-- Dukungan alpha channel PNG (transparan)
-- Custom emoji bisa ditambahkan dengan mudah
+
+- ✅ Deteksi real-time gesture tangan dengan webcam
+- ✅ Menampilkan emoji sesuai gesture (misal: 👍 ✌️ ✊ 🤟)
+- ✅ Dukungan alpha channel PNG (transparan)
+- ✅ Custom emoji bisa ditambahkan dengan mudah
 
 ## 🛠️ Teknologi
+
 - Python 3
 - OpenCV
 - MediaPipe
-- (Optional) TensorFlow / DeepFace (jika kamu gabungkan dengan deteksi wajah)
+- (Opsional) TensorFlow / DeepFace (jika digabung dengan deteksi ekspresi wajah)
 
 ## 🖼️ Gesture yang Didukung
 
-| Gesture       | Emoji         |
-|---------------|---------------|
-| Thumbs Up     | 👍             |
-| Peace         | ✌️             |
-| Fist          | ✊             |
-| Open Hand     | 🖐️             |
-| Korean Love   | ❤️ (dua jari) |
-| Metal Rock    | 🤘             |
+| Gesture       | Emoji          |
+|---------------|----------------|
+| Thumbs Up     | 👍              |
+| Peace         | ✌️              |
+| Fist          | ✊              |
+| Open Hand     | 🖐️              |
+| Korean Love   | ❤️ (dua jari)  |
+| Metal Rock    | 🤘              |
 
 ## 📂 Struktur Folder
 
+```
 facepy/
 ├── emoji/
-│ ├── thumbs_up.png
-│ ├── peace.png
-│ ├── fist.png
-│ └── ...
-├── main.py # (opsional) deteksi ekspresi wajah
-├── emote.py # gesture ke emoji
+│   ├── thumbs_up.png
+│   ├── peace.png
+│   ├── fist.png
+│   └── ...
+├── main.py      # (opsional) deteksi ekspresi wajah
+├── emote.py     # gesture ke emoji
+├── requirements.txt
 └── README.md
-
-bash
-Copy
-Edit
+```
 
 ## 🚀 Cara Menjalankan
 
@@ -49,37 +49,50 @@ Edit
 ```bash
 git clone https://github.com/username/nama-repo.git
 cd nama-repo
-2. Buat Virtual Environment
-bash
-Copy
-Edit
+```
+
+### 2. Buat Virtual Environment
+
+```bash
 python -m venv facepy_env
-.\facepy_env\Scripts\activate  # Windows
-3. Install Dependensi
-bash
-Copy
-Edit
+.\facepy_env\Scripts\activate  # untuk Windows
+```
+
+### 3. Install Dependensi
+
+```bash
 pip install -r requirements.txt
-Atau jika belum ada requirements.txt, jalankan:
+```
 
-bash
-Copy
-Edit
+> Jika belum ada `requirements.txt`, kamu bisa install manual:
+
+```bash
 pip install opencv-python mediapipe
-4. Jalankan Program
-bash
-Copy
-Edit
+```
+
+### 4. Jalankan Program
+
+```bash
 python emote.py
-Tekan q untuk keluar dari aplikasi.
+```
 
-🧠 Catatan
-Pastikan emoji PNG memiliki alpha channel (format transparan).
+> Tekan `q` untuk keluar dari aplikasi.
 
-Jika emoji tidak muncul atau hanya tanda tanya, pastikan gambar bisa dibaca oleh cv2.imread dan berada di path yang benar.
+## 🧠 Catatan
 
-🧑‍💻 Kontribusi
-Silakan fork dan PR jika ingin menambahkan gesture baru, fitur lanjutan (seperti ekspresi wajah), atau peningkatan performa.
+- Pastikan gambar emoji PNG memiliki **alpha channel** (transparan), gunakan format `.png`.
+- Jika emoji tidak muncul atau muncul tanda tanya:
+  - Pastikan file berada di folder `emoji/`
+  - Nama file dan ekstensi benar
+  - Gunakan `cv2.IMREAD_UNCHANGED` saat memuat PNG
 
-📄 Lisensi
-MIT License © 2025 Dion Ahza
+## 🧑‍💻 Kontribusi
+
+Silakan fork dan buat pull request jika ingin:
+- Menambahkan gesture baru
+- Menambahkan deteksi ekspresi wajah
+- Meningkatkan akurasi atau fitur lainnya
+
+## 📄 Lisensi
+
+MIT License © 2025 [Dion Ahza](https://github.com/DionAhza)
